@@ -1,23 +1,31 @@
 <?php
 
+    $dia = readline("Informe o dia do seu nascimento:  ");
+    $mes = readline("Informe o mês do seu nascimento em números:  ");
+    $ano = readline("Informe o seu ano de nascimento, com os dois últimos digitos somente:  ");
 
-    $dia = readline("Qual o dia do seu nascimento?  ");
-    $mes = readline("Qual o mês do seu nascimento em número?  ");
-    $ano = readline("Qual o seu ano de nascimento, com os dois últimos digitos somente?  ");
+    safadometro($dia, $mes, $ano);
 
-    safadometro();
 
-    function safadometro($dia, $mes, $ano){
-        $safadeza = soamtorio($mes)+($ano/100)*(50-$dia);
-        $anjo = 100 * $safadeza;
-        print ("Seu nível de safadeza é de $anjo%.");
-        
+    function safadometro(int $dia , int $mes , int $ano){
+
+        $safadeza = 0;
+
+        $safadeza = somatorio($mes)+($ano/100)*(50-$dia);
+
+        $anjo = 0;
+
+        $anjo = 100 - $safadeza;
+
+        print "$anjo% anjo perfeito, mas aquele $safadeza% é vagabundo.";
+
     }
-    function somatorio($mes){
+    function somatorio(int $mes){
 
-        for($i = $mes; $i > 0; $i--){
-        $mes = $mes  + $i;
-        }
-        return[$mes];
-    
+        $soma = 0;
+
+        $soma = $mes * (($mes + 1)/2);
+
+        return $soma;
+
     }
