@@ -54,4 +54,5 @@ lab@lab:~/leticia 1 tds$ php -S localhost:8082
 [Fri Oct  6 14:55:57 2023] PHP 8.1.2-1ubuntu2.14 Development Server (http://localhost:8082) started
 
 tela
+link : http://localhost:8080/safadao.php?campo_dia=23&campo_mes=01&campo_ano=07
 97.11% anjo perfeito, mas aquele 2.89% é vagabundo.
